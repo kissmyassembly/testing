@@ -14,6 +14,10 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBOutlet weak var eatFoodButton: UIButton!
     @IBOutlet weak var label: UILabel!
     
+    var mathLabel = UILabel()
+    var difficultyLabel = UILabel()
+    var gameModeLabel = UILabel()
+    
     //var eatFoodButt = UIButton()
     var mathSegment = UISegmentedControl()
     var difficultySegment = UISegmentedControl()
@@ -47,8 +51,28 @@ class MessagesViewController: MSMessagesAppViewController {
         self.eatFoodButton.isHidden = true
         self.label.isHidden = true
         
+        // label constants
+        let labelSpace = 5 // space between label and associated segmented control
+        let labelWidth = 200
+        let labelHeight = 20
+        
+        // segment constants
+        let segmentSpace = 40 // space between segments
+        let segmentWidth = 200
+        let segmentHeight = 30
+        let mathSegmentY = segmentSpace
+        let difficultySegmentY = mathSegmentY + segmentHeight + segmentSpace
+        let gameModeSegmentY = difficultySegmentY + segmentHeight + segmentSpace
+        
         // MATH SEGMENTED CONTROL //
-        mathSegment = UISegmentedControl(frame: CGRect(x: 0, y: 10, width: 200, height: 30))
+        mathSegment = UISegmentedControl(
+            frame: CGRect(
+                x: 0,
+                y: mathSegmentY,
+                width: segmentWidth,
+                height: segmentHeight
+            )
+        )
         mathSegment.backgroundColor = .white
         
         mathSegment.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
@@ -57,8 +81,8 @@ class MessagesViewController: MSMessagesAppViewController {
         mathSegment.layer.borderColor = UIColor(red: 0.18, green: 0.18, blue: 0.18, alpha: 1).cgColor
         
         mathSegment.translatesAutoresizingMaskIntoConstraints = true
-        mathSegment.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        mathSegment.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        mathSegment.widthAnchor.constraint(equalToConstant: CGFloat(segmentWidth)).isActive = true
+        mathSegment.heightAnchor.constraint(equalToConstant: CGFloat(segmentHeight)).isActive = true
         mathSegment.center.x = self.view.center.x
         
         mathSegment.insertSegment(withTitle: "+", at: 0, animated: true)
@@ -68,7 +92,18 @@ class MessagesViewController: MSMessagesAppViewController {
         self.view.addSubview(mathSegment)
         
         // DIFFICULTY SEGMENTED CONTROL //
-        difficultySegment = UISegmentedControl(frame: CGRect(x: 0, y: 50, width: 200, height: 30))
+        difficultySegment = UISegmentedControl(
+            frame: CGRect(
+                x: 0,
+                y: difficultySegmentY,
+                width: segmentWidth,
+                height: segmentHeight
+            )
+        )
+        print("\n\n" + "mathSegment.frame.origin.x: ")// test print
+        print(mathSegment.frame.origin.x)
+        print("\n")
+        
         difficultySegment.backgroundColor = .white
         
         difficultySegment.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
@@ -77,8 +112,8 @@ class MessagesViewController: MSMessagesAppViewController {
         difficultySegment.layer.borderColor = UIColor(red: 0.18, green: 0.18, blue: 0.18, alpha: 1).cgColor
         
         difficultySegment.translatesAutoresizingMaskIntoConstraints = true
-        difficultySegment.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        difficultySegment.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        difficultySegment.widthAnchor.constraint(equalToConstant: CGFloat(segmentWidth)).isActive = true
+        difficultySegment.heightAnchor.constraint(equalToConstant: CGFloat(segmentHeight)).isActive = true
         difficultySegment.center.x = self.view.center.x
         
         difficultySegment.insertSegment(withTitle: "Easy", at: 0, animated: true)
@@ -87,7 +122,14 @@ class MessagesViewController: MSMessagesAppViewController {
         self.view.addSubview(difficultySegment)
         
         // GAMEMODE SEGMENTED CONTROL //
-        gameModeSegment = UISegmentedControl(frame: CGRect(x: 0, y: 90, width: 200, height: 30))
+        gameModeSegment = UISegmentedControl(
+            frame: CGRect(
+                x: 0,
+                y: gameModeSegmentY,
+                width: segmentWidth,
+                height: segmentHeight
+            )
+        )
         gameModeSegment.backgroundColor = .white
         
         gameModeSegment.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
@@ -96,14 +138,61 @@ class MessagesViewController: MSMessagesAppViewController {
         gameModeSegment.layer.borderColor = UIColor(red: 0.18, green: 0.18, blue: 0.18, alpha: 1).cgColor
         
         gameModeSegment.translatesAutoresizingMaskIntoConstraints = true
-        gameModeSegment.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        gameModeSegment.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        gameModeSegment.widthAnchor.constraint(equalToConstant: CGFloat(segmentWidth)).isActive = true
+        gameModeSegment.heightAnchor.constraint(equalToConstant: CGFloat(segmentHeight)).isActive = true
         gameModeSegment.center.x = self.view.center.x
         
         gameModeSegment.insertSegment(withTitle: "Timed", at: 0, animated: true)
         gameModeSegment.insertSegment(withTitle: "Untimed", at: 1, animated: true)
         self.view.addSubview(gameModeSegment)
         
+        // MATH LABEL //
+        mathLabel = UILabel(
+            frame: CGRect(
+                x: 0,
+                y: mathSegmentY - labelSpace - labelHeight,
+                width: labelWidth,
+                height: labelHeight
+            )
+        )
+        mathLabel.text = "Math Type"
+        mathLabel.translatesAutoresizingMaskIntoConstraints = true
+        mathLabel.widthAnchor.constraint(equalToConstant: CGFloat(labelWidth)).isActive = true
+        mathLabel.heightAnchor.constraint(equalToConstant: CGFloat(labelHeight)).isActive = true
+        mathLabel.center.x = self.view.center.x
+        self.view.addSubview(mathLabel)
+        
+        // DIFFICULTY LABEL //
+        difficultyLabel = UILabel(
+            frame: CGRect(
+                x: 0,
+                y: difficultySegmentY - labelSpace - labelHeight,
+                width: labelWidth,
+                height: labelHeight
+            )
+        )
+        difficultyLabel.text = "Difficulty"
+        difficultyLabel.translatesAutoresizingMaskIntoConstraints = true
+        difficultyLabel.widthAnchor.constraint(equalToConstant: CGFloat(labelWidth)).isActive = true
+        difficultyLabel.heightAnchor.constraint(equalToConstant: CGFloat(labelHeight)).isActive = true
+        difficultyLabel.center.x = self.view.center.x
+        self.view.addSubview(difficultyLabel)
+        
+        // GAME MODE LABEL //
+        gameModeLabel = UILabel(
+            frame: CGRect(
+                x: 0,
+                y: gameModeSegmentY - labelSpace - labelHeight,
+                width: labelWidth,
+                height: labelHeight
+            )
+        )
+        gameModeLabel.text = "Game Mode"
+        gameModeLabel.translatesAutoresizingMaskIntoConstraints = true
+        gameModeLabel.widthAnchor.constraint(equalToConstant: CGFloat(labelWidth)).isActive = true
+        gameModeLabel.heightAnchor.constraint(equalToConstant: CGFloat(labelHeight)).isActive = true
+        gameModeLabel.center.x = self.view.center.x
+        self.view.addSubview(gameModeLabel)
     }
     
     // MARK: - Conversation Handling
