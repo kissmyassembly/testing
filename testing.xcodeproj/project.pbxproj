@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DBA25E8225E88C5000BA4C5 /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA25E7225E88C5000BA4C5 /* ButtonExtensions.swift */; };
 		64809A38223C3E2C00F5D26F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64809A37223C3E2C00F5D26F /* Assets.xcassets */; };
 		64809A3F223C3E2C00F5D26F /* testing MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 64809A3E223C3E2C00F5D26F /* testing MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		64809A44223C3E2C00F5D26F /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64809A43223C3E2C00F5D26F /* Messages.framework */; };
@@ -40,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5DBA25E7225E88C5000BA4C5 /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		64809A34223C3E2B00F5D26F /* testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64809A37223C3E2C00F5D26F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64809A39223C3E2C00F5D26F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DBA25E5225E8883000BA4C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5DBA25E7225E88C5000BA4C5 /* ButtonExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		64809A2D223C3E2B00F5D26F = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		64809A45223C3E2C00F5D26F /* testing MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
+				5DBA25E5225E8883000BA4C5 /* Extensions */,
 				64809A46223C3E2C00F5D26F /* MessagesViewController.swift */,
 				64809A48223C3E2C00F5D26F /* MainInterface.storyboard */,
 				64809A4B223C3E2D00F5D26F /* Assets.xcassets */,
@@ -210,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64809A47223C3E2C00F5D26F /* MessagesViewController.swift in Sources */,
+				5DBA25E8225E88C5000BA4C5 /* ButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,14 +368,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VVRFTUU4QN;
+				DEVELOPMENT_TEAM = W54LBZDX8H;
 				INFOPLIST_FILE = "testing MessagesExtension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gourijamakhandi.testing.MessagesExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motiveg.testing.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -376,14 +388,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VVRFTUU4QN;
+				DEVELOPMENT_TEAM = W54LBZDX8H;
 				INFOPLIST_FILE = "testing MessagesExtension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gourijamakhandi.testing.MessagesExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motiveg.testing.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -397,9 +409,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VVRFTUU4QN;
+				DEVELOPMENT_TEAM = W54LBZDX8H;
 				INFOPLIST_FILE = testing/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gourijamakhandi.testing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motiveg.testing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -412,9 +424,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VVRFTUU4QN;
+				DEVELOPMENT_TEAM = W54LBZDX8H;
 				INFOPLIST_FILE = testing/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gourijamakhandi.testing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motiveg.testing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
