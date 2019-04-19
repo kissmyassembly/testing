@@ -21,11 +21,15 @@ extension UISegmentedControl {
             )
         )
         
+        // unsure where this shows
         mathSegment.backgroundColor = MenuConstants.Segment.bgColor
+        // unselected segments
         mathSegment.layer.backgroundColor = MenuConstants.Segment.layerBGColor
         mathSegment.layer.cornerRadius = MenuConstants.Segment.cornerRadius
         mathSegment.layer.borderWidth = MenuConstants.Segment.borderWidth
+        // outer border
         mathSegment.layer.borderColor = MenuConstants.Segment.borderColor
+        // unselected segment text, selection bg, dividers
         mathSegment.tintColor = MenuConstants.Segment.tintColor
         mathSegment.layer.masksToBounds = true
         
@@ -47,11 +51,15 @@ extension UISegmentedControl {
             )
         )
         
+        // unsure where this shows
         difficultySegment.backgroundColor = MenuConstants.Segment.bgColor
+        // unselected segments
         difficultySegment.layer.backgroundColor = MenuConstants.Segment.layerBGColor
         difficultySegment.layer.cornerRadius = MenuConstants.Segment.cornerRadius
         difficultySegment.layer.borderWidth = MenuConstants.Segment.borderWidth
+        // outer border
         difficultySegment.layer.borderColor = MenuConstants.Segment.borderColor
+        // unselected segment text, selection bg, dividers
         difficultySegment.tintColor = MenuConstants.Segment.tintColor
         difficultySegment.translatesAutoresizingMaskIntoConstraints = true
         difficultySegment.layer.masksToBounds = true
@@ -73,11 +81,15 @@ extension UISegmentedControl {
             )
         )
         
+        // unsure where this shows
         gameModeSegment.backgroundColor = MenuConstants.Segment.bgColor
+        // unselected segments
         gameModeSegment.layer.backgroundColor = MenuConstants.Segment.layerBGColor
         gameModeSegment.layer.cornerRadius = MenuConstants.Segment.cornerRadius
         gameModeSegment.layer.borderWidth = MenuConstants.Segment.borderWidth
+        // outer border
         gameModeSegment.layer.borderColor = MenuConstants.Segment.borderColor
+        // unselected segment text, selection bg, dividers
         gameModeSegment.tintColor = MenuConstants.Segment.tintColor
         gameModeSegment.translatesAutoresizingMaskIntoConstraints = true
         gameModeSegment.layer.masksToBounds = true

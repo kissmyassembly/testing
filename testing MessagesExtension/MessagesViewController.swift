@@ -14,10 +14,10 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBOutlet weak var eatFoodButton: UIButton!
     @IBOutlet weak var label: UILabel!
     
+    // MAKE COMPONENTS REACCESSIBLE
     var mathLabel = UILabel()
     var difficultyLabel = UILabel()
     var gameModeLabel = UILabel()
-    
     var mathSegment = UISegmentedControl()
     var difficultySegment = UISegmentedControl()
     var gameModeSegment = UISegmentedControl()
@@ -47,6 +47,10 @@ class MessagesViewController: MSMessagesAppViewController {
         // TEMP: hide these components in view
         self.eatFoodButton.isHidden = true
         self.label.isHidden = true
+        
+        // TODO
+        // - modify constraints here
+        // - modify styling in SegmentExtensions + MenuConstants
         
         // MATH TYPE LABEL
         mathLabel = UILabel.mathTypeLabel()
