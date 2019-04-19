@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5DBA25E8225E88C5000BA4C5 /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA25E7225E88C5000BA4C5 /* ButtonExtensions.swift */; };
+		5DBA25E8225E88C5000BA4C5 /* SegmentExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBA25E7225E88C5000BA4C5 /* SegmentExtensions.swift */; };
+		5DE7A22B226A6399006BCF7E /* MenuConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE7A22A226A6399006BCF7E /* MenuConstants.swift */; };
 		64809A38223C3E2C00F5D26F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64809A37223C3E2C00F5D26F /* Assets.xcassets */; };
 		64809A3F223C3E2C00F5D26F /* testing MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 64809A3E223C3E2C00F5D26F /* testing MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		64809A44223C3E2C00F5D26F /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64809A43223C3E2C00F5D26F /* Messages.framework */; };
@@ -41,7 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5DBA25E7225E88C5000BA4C5 /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		5DBA25E7225E88C5000BA4C5 /* SegmentExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentExtensions.swift; sourceTree = "<group>"; };
+		5DE7A22A226A6399006BCF7E /* MenuConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConstants.swift; sourceTree = "<group>"; };
 		64809A34223C3E2B00F5D26F /* testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64809A37223C3E2C00F5D26F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64809A39223C3E2C00F5D26F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,12 +67,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5DBA25E5225E8883000BA4C5 /* Extensions */ = {
+		5DBA25E5225E8883000BA4C5 /* UIExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				5DBA25E7225E88C5000BA4C5 /* ButtonExtensions.swift */,
+				5DE7A229226A634F006BCF7E /* Constants */,
+				5DBA25E7225E88C5000BA4C5 /* SegmentExtensions.swift */,
 			);
-			path = Extensions;
+			path = UIExtensions;
+			sourceTree = "<group>";
+		};
+		5DE7A229226A634F006BCF7E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5DE7A22A226A6399006BCF7E /* MenuConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		64809A2D223C3E2B00F5D26F = {
@@ -112,7 +123,7 @@
 		64809A45223C3E2C00F5D26F /* testing MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				5DBA25E5225E8883000BA4C5 /* Extensions */,
+				5DBA25E5225E8883000BA4C5 /* UIExtensions */,
 				64809A46223C3E2C00F5D26F /* MessagesViewController.swift */,
 				64809A48223C3E2C00F5D26F /* MainInterface.storyboard */,
 				64809A4B223C3E2D00F5D26F /* Assets.xcassets */,
@@ -221,7 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				64809A47223C3E2C00F5D26F /* MessagesViewController.swift in Sources */,
-				5DBA25E8225E88C5000BA4C5 /* ButtonExtensions.swift in Sources */,
+				5DE7A22B226A6399006BCF7E /* MenuConstants.swift in Sources */,
+				5DBA25E8225E88C5000BA4C5 /* SegmentExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
